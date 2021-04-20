@@ -1,0 +1,1 @@
+hts_AdapterTrimmer -m 50 -O -L ./01-hts_AdapterTrimmed/trim.log -1 ./0rawdata/PHAV0010121-B_S6_L002_R1_001.fastq -2 ./0rawdata/PHAV0010121-B_S6_L002_R2_001.fastq | hts_SeqScreener -S -O -A -L ./01-hts_AdapterTrimmed/trim.log | hts_SeqScreener -k 15 -x .01 -S -s adapters.fa -A -L ./01-hts_AdapterTrimmed/trim.log -p ./01-hts_AdapterTrimmed/PHAV0010121-B
